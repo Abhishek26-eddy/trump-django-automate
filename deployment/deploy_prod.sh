@@ -6,6 +6,5 @@ ssh root@18.224.33.239 <<EOF
   source /opt/envs/trump-django-automate/bin/activate
   pip3 install -r requirements.txt
   ./manage.py migrate
-  sudo supervisorctl restart djtrump
   exit
 EOF
