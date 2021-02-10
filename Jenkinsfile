@@ -13,7 +13,7 @@ node {
         stage 'Test'
             sh 'virtualenv env -p python3.8.5'
         stage 'Deploy'
-            sh './deployment/deploy_prod.sh'
+            sh './deploy_prod.sh'
 
         stage 'Publish results'
             slackSend color: "good", message: "Build successful: `${env.JOB_NAME}#${env.BUILD_NUMBER}` <${env.BUILD_URL}|Open in Jenkins>"
