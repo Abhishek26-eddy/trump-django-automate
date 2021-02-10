@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh root@18.224.33.239 <<EOF
+ssh root@3.138.172.68 <<EOF
   cd trump-django-automate
   git pull
   source /envs/bin/activate
