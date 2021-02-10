@@ -11,10 +11,10 @@ node {
             slackSend color: "warning", message: "Started `${env.JOB_NAME}#${env.BUILD_NUMBER}`\n\n_The changes:_\n${lastChanges}"
 
         stage 'Test'
-            sh 'virtualenv env -p python3.5'
+            sh 'virtualenv env -p python3.8.5'
             sh '. my_env/bin/activate'
             sh 'my_env/bin/pip3 install -r requirements.txt'
-            sh 'my_env/bin/python3.5 manage.py test --testrunner=djtrump.tests.test_runners.NoDbTestRunner'
+            sh 'my_env/bin/python3.8.5 manage.py test --testrunner=djtrump.tests.test_runners.NoDbTestRunner'
 
         stage 'Deploy'
             sh './deployment/deploy_prod.sh'
