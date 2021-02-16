@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ssh root@18.224.33.239 <<EOF
+ssh root@13.58.14.243 <<EOF
   cd djtrump
   git pull
   source /opt/envs/djtrump/bin/activate
