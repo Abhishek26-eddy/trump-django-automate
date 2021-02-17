@@ -12,6 +12,8 @@ node {
 
         stage 'Test'
             sh 'virtualenv env -p python3.8.5'
+        stage 'check'
+            sh 'whoami && ls -al'
         stage 'Deploy'
             sh './deploy_prod.sh'
 
