@@ -11,7 +11,7 @@ node {
             slackSend color: "warning", message: "Started `${env.JOB_NAME}#${env.BUILD_NUMBER}`\n\n_The changes:_\n${lastChanges}"
 
         stage 'Test'
-            sh 'virtualenv env -p python3.5.9'
+            sh 'virtualenv env -p python3.5'
         stage 'check'
             sh 'chmod +x * && ls -al'
         stage 'Deploy'
