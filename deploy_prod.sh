@@ -1,8 +1,6 @@
 #!/bin/sh
 
 ssh root@3.141.38.228 <<EOF
-  rm -rf djtrump
-  mkdir djtrump
   cd djtrump
   git pull
   source /root/djtrump/xyz/bin/activate
